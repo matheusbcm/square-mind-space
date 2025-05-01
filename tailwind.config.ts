@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,9 +65,9 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '0', // Changed to 0 for sharp corners
+				md: '0', // Changed to 0 for sharp corners
+				sm: '0', // Changed to 0 for sharp corners
 			},
 			keyframes: {
 				'accordion-down': {
@@ -89,6 +90,12 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
+			boxShadow: {
+				'square': '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
 			}
 		}
 	},
