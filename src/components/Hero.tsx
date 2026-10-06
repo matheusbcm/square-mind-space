@@ -9,9 +9,6 @@ const Hero = () => {
     <section id="inicio" className="border-b border-border px-5 py-8 md:px-10 md:py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
         <div className="order-2 md:order-1">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent-foreground">
-            {profile.role} · {profile.crp}
-          </p>
           <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
             {profile.displayName}
           </h1>

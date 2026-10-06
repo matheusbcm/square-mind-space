@@ -7,27 +7,17 @@ const Training = () => {
       <div className="mx-auto max-w-6xl">
         <p className="section-kicker">Formação acadêmica</p>
         <h2 className="section-title">Formação e competências.</h2>
-        <div className="mt-10 grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">
-          <div className="border-t border-border">
-            {profile.education.map((item) => (
-              <article key={item.title} className="grid gap-3 border-b border-border py-6 md:grid-cols-[150px_1fr]">
-                <p className="text-sm font-medium text-muted-foreground">{item.period}</p>
-                <div>
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-1 text-sm font-medium">{item.institution}</p>
-                  <p className="mt-3 leading-relaxed text-muted-foreground">{item.details}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest">Áreas de atuação</h3>
-            <ul className="border-l border-t border-border">
-              {profile.skills.map((skill) => (
-                <li key={skill} className="border-b border-r border-border px-4 py-3 text-sm">{skill}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-10 border-t border-border">
+          {profile.education.map((item) => (
+            <article key={item.title} className="grid gap-3 border-b border-border py-6 md:grid-cols-[150px_1fr]">
+              <p className="text-sm font-medium text-muted-foreground">{item.period}</p>
+              <div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-1 text-sm font-medium">{item.institution}</p>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.details}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
