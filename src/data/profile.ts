@@ -30,8 +30,42 @@ export const education = [
     degree: "Bacharelado em Psicologia",
     institution: "UNIPE",
     period: "2013 – 2018",
-    details: ["Abordagem de atuação: TCC.", "Participação em pesquisas e projetos de monitoria.", "Desenvolvimento de raciocínio clínico e compreensão do comportamento humano."],
+    details: [
+      "Abordagem de atuação: TCC.",
+      "Participação em pesquisas e projetos de monitoria.",
+      "Desenvolvimento de raciocínio clínico e compreensão do comportamento humano.",
+    ],
   },
 ];
 
-export const skills = ["Psicologia Clínica", "Terapia Cognitivo-Comportamental", "Mindfulness", "Intervenção em Crise", "Aconselhamento", "Empatia e Escuta Ativa", "Comunicação Efetiva", "Trabalho em Equipe"];
+export const additionalTraining = [
+  {
+    degree: "Formação de Terapeuta ABA",
+    institution: "Especialização em Análise do Comportamento Aplicada",
+    period: "Em andamento",
+    details: [
+      "Aplicação de estratégias comportamentais baseadas em evidências.",
+      "Intervenções focadas em autonomia, regulação emocional e desenvolvimento de habilidades.",
+    ],
+  },
+  {
+    degree: "Formação em Processo de Analista do Comportamento",
+    institution: "Formação complementar em Análise do Comportamento",
+    period: "Em andamento",
+    details: [
+      "Compreensão funcional do comportamento e dos contextos de aprendizagem.",
+      "Avaliação e intervenção em situações com foco em estratégias comportamentais sustentáveis.",
+    ],
+  },
+];
+
+export const skills = [
+  "Psicologia Clínica",
+  "Terapia Cognitivo-Comportamental",
+  "Mindfulness",
+  "Intervenção em Crise",
+  "Aconselhamento",
+  "Empatia e Escuta Ativa",
+  "Comunicação Efetiva",
+  "Trabalho em Equipe",
+];
