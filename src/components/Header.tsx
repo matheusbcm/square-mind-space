@@ -1,26 +1,29 @@
 
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { profile } from "@/content/profile";
 import { ThemeToggle } from "./ThemeToggle";
-import { Separator } from "@/components/ui/separator";
 
 const Header = () => {
   return (
-    <header className="py-6 px-4 md:px-8 flex justify-between items-center">
-      <div className="text-lg font-medium">Dr. Psychology</div>
-      <nav className="hidden md:flex items-center space-x-8">
-        <a href="#about" className="hover:text-primary/80 transition-colors">
-          About
+    <header className="border-b border-border px-5 py-4 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+        <a href="#inicio" className="min-w-0" aria-label="Ir para o início">
+          <span className="block truncate text-sm font-semibold uppercase md:text-base">
+            {profile.displayName}
+          </span>
+          <span className="block text-xs text-muted-foreground">{profile.crp}</span>
         </a>
-        <a href="#experience" className="hover:text-primary/80 transition-colors">
-          Experience
-        </a>
-        <a href="#training" className="hover:text-primary/80 transition-colors">
-          Training
-        </a>
-        <a href="#contact" className="hover:text-primary/80 transition-colors">
-          Contact
-        </a>
-      </nav>
-      <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button asChild size="sm">
+            <a href={profile.whatsappUrl} target="_blank" rel="noreferrer">
+              <MessageCircle aria-hidden="true" />
+              <span className="hidden sm:inline">Contato</span>
+            </a>
+          </Button>
+        </div>
+      </div>
     </header>
   );
 };
