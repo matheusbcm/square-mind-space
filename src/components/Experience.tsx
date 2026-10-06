@@ -11,7 +11,9 @@ const Experience = () => (
           <Briefcase className="h-6 w-6 mt-1" />
           <div>
             <CardTitle className="text-xl">Psicólogo Clínico</CardTitle>
-            <div className="text-sm text-muted-foreground">Consultório particular | 6 anos de atuação</div>
+            <div className="text-sm text-muted-foreground">
+              Consultório particular | 7 anos de atuação
+            </div>
           </div>
         </CardHeader>
         <CardContent>

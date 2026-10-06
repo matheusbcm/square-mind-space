@@ -12,7 +12,7 @@ export const profile = {
 export const whatsappUrl = `https://wa.me/${profile.whatsappNumber}?text=${encodeURIComponent(profile.whatsappMessage)}`;
 
 export const about = [
-  "Psicólogo Clínico com 6 anos de experiência consolidada em atendimento, atuando com a abordagem da Terapia Cognitivo-Comportamental (TCC).",
+  "Psicólogo Clínico com 7 anos de experiência consolidada em atendimento, atuando com a abordagem da Terapia Cognitivo-Comportamental (TCC).",
   "Integro práticas de atenção plena (Mindfulness) no suporte ao bem-estar, à regulação emocional e ao desenvolvimento pessoal.",
   "Busco aprimoramento contínuo para oferecer intervenções baseadas em evidências, com escuta ativa, empatia e um plano terapêutico individualizado.",
 ];

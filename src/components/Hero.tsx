@@ -19,11 +19,12 @@ const Hero = () => (
         {profile.title} · TCC
       </p>
       <h1 className="text-3xl md:text-5xl font-bold mb-6">
-        Cuidado psicológico baseado em evidências
+        Psicoterapia com Empatia e Propósito.
       </h1>
       <p className="text-lg md:text-xl mb-8 text-muted-foreground">
-        Atendimento com {profile.approach} para ajudar você a lidar com
-        ansiedade, depressão e outros desafios emocionais.
+        Atendimento psicológico humanizado para ajudar você a compreender suas
+        emoções, lidar com a ansiedade e encontrar um caminho mais leve, unindo
+        empatia e a segurança da Terapia Cognitivo-Comportamental (TCC).
       </p>
       <Button asChild className="hidden md:inline-flex text-lg py-6 px-8">
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
