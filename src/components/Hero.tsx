@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { profile, whatsappUrl } from "@/data/profile";
-import photo from "@/assets/matheus-carvalho.png.asset.json";
+import photo from "@/assets/WhatsApp Image 2026-07-22 at 01.15.13.jpeg";
 
 const Hero = () => (
   <section className="py-12 md:py-20 px-4 md:px-8">
     <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
       <img
-        src={photo.url}
+        src={photo}
         alt={`Foto de ${profile.name}`}
         className="md:hidden w-56 h-56 object-cover border border-border mb-6"
       />
