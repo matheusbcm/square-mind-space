@@ -1,5 +1,4 @@
 
-import { Check } from "lucide-react";
 import { profile } from "@/content/profile";
 
 const Experience = () => {
