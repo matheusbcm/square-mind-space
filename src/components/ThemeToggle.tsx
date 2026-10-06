@@ -37,7 +37,7 @@ export function ThemeToggle() {
       ) : (
         <Sun className="h-[1.2rem] w-[1.2rem]" />
       )}
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">Alternar tema</span>
     </Button>
   );
 }
