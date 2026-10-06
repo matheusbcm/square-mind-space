@@ -1,25 +1,32 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Briefcase } from "lucide-react";
+import { experiences } from "@/data/profile";
 
-import { profile } from "@/content/profile";
-
-const Experience = () => {
-  return (
-    <section id="experiencia" className="section">
-      <div className="mx-auto max-w-6xl">
-        <p className="section-kicker">Experiência profissional</p>
-        <h2 className="section-title max-w-2xl">Psicologia clínica baseada em evidências.</h2>
-        <div className="mt-10 grid border-l border-t border-border md:grid-cols-2">
-          {profile.experience.map((item, index) => (
-            <div key={item} className="flex gap-4 border-b border-r border-border p-6 md:p-8">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-border text-xs font-semibold">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="leading-relaxed text-muted-foreground">{item}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+const Experience = () => (
+  <section id="experiencia" className="section">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="section-title">Experiência Profissional</h2>
+      <Card className="shadow-square">
+        <CardHeader className="flex flex-row items-start gap-4 pb-2">
+          <Briefcase className="h-6 w-6 mt-1" />
+          <div>
+            <CardTitle className="text-xl">Psicólogo Clínico</CardTitle>
+            <div className="text-sm text-muted-foreground">Consultório particular | 6 anos de atuação</div>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <ul className="grid gap-3">
+            {experiences.map((e) => (
+              <li key={e} className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 mt-2 bg-primary flex-shrink-0" />
+                <span>{e}</span>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+);
 
 export default Experience;

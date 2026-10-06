@@ -1,12 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 20% 12%;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -14,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 205 45% 28%;
+    --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 200 16% 94%;
+    --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 200 16% 94%;
-    --muted-foreground: 210 9% 40%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 198 48% 88%;
+    --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 12% 82%;
-    --input: 210 12% 82%;
-    --ring: 205 45% 28%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
 
     --radius: 0;
 
@@ -46,33 +48,33 @@
   }
 
   .dark {
-    --background: 213 24% 9%;
-    --foreground: 200 14% 92%;
+    --background: 240 10% 7%;
+    --foreground: 0 0% 90%;
 
-    --card: 213 20% 12%;
+    --card: 240 10% 9.8%;
     --card-foreground: 0 0% 95%;
 
     --popover: 240 10% 6%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 198 45% 68%;
-    --primary-foreground: 213 24% 9%;
+    --primary: 0 0% 90%;
+    --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 210 18% 15%;
+    --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 18% 15%;
-    --muted-foreground: 205 10% 67%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 204 23% 19%;
+    --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 208 16% 24%;
-    --input: 208 16% 24%;
-    --ring: 198 45% 68%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -92,25 +94,18 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: Arial, Helvetica, sans-serif;
   }
   
   .section {
-    @apply px-5 py-16 md:px-10 md:py-24;
+    @apply py-16 px-4;
   }
   
   .section-title {
-    @apply text-3xl font-semibold leading-tight md:text-5xl;
+    @apply text-3xl font-semibold mb-8 inline-block relative;
   }
-
-  .section-kicker {
-    @apply mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground;
+  
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-16 h-0.5 bg-foreground;
   }
-}
-
-html { scroll-behavior: smooth; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

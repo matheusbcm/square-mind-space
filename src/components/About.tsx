@@ -1,21 +1,21 @@
-import { profile } from "@/content/profile";
+import { about, profile, skills } from "@/data/profile";
+import photo from "@/assets/matheus-carvalho.png.asset.json";
 
-const About = () => {
-  return (
-    <section id="sobre" className="section bg-secondary/40">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
-          <div>
-            <p className="section-kicker">Perfil profissional</p>
-            <h2 className="section-title">Cuidado clínico com escuta e método.</h2>
-          </div>
-          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-            {profile.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+const About = () => (
+  <section id="sobre" className="section bg-secondary/40">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="section-title">Sobre Mim</h2>
+      <div className="grid md:grid-cols-2 gap-8">
+        <img src={photo.url} alt={`Foto de ${profile.name}`} className="hidden md:block w-full object-cover h-[400px] border border-border" />
+        <div>
+          {about.map((p) => <p key={p} className="mb-4">{p}</p>)}
+          <div className="flex flex-wrap gap-2 mt-6">
+            {skills.map((s) => <span key={s} className="text-sm px-3 py-1 border border-border">{s}</span>)}
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;

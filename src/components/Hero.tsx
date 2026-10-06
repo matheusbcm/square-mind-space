@@ -1,50 +1,24 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowDown, MessageCircle } from "lucide-react";
-import portraitAsset from "@/assets/matheus-carvalho.png.asset.json";
-import { profile } from "@/content/profile";
+import { profile, whatsappUrl } from "@/data/profile";
+import photo from "@/assets/matheus-carvalho.png.asset.json";
 
-const Hero = () => {
-  return (
-    <section id="inicio" className="border-b border-border px-5 py-8 md:px-10 md:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-        <div className="order-2 md:order-1">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-accent-foreground">
-            {profile.role} · {profile.crp}
-          </p>
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
-            {profile.displayName}
-          </h1>
-          <p className="mt-4 text-lg font-medium text-foreground md:text-xl">{profile.specialty}</p>
-          <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">{profile.summary}</p>
-          <div className="mt-8 hidden items-center gap-3 md:flex">
-            <Button asChild size="lg">
-              <a href={profile.whatsappUrl} target="_blank" rel="noreferrer">
-                <MessageCircle aria-hidden="true" /> Agendar conversa
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="#sobre">Conheça meu trabalho <ArrowDown aria-hidden="true" /></a>
-            </Button>
-          </div>
-        </div>
-        <div className="order-1 md:order-2">
-          <div className="aspect-[4/5] max-h-[570px] overflow-hidden border border-border bg-muted">
-            <img
-              src={portraitAsset.url}
-              alt={`Retrato profissional de ${profile.displayName}`}
-              className="h-full w-full object-cover object-top grayscale-[15%]"
-            />
-          </div>
-          <Button asChild size="lg" className="mt-4 w-full md:hidden">
-            <a href={profile.whatsappUrl} target="_blank" rel="noreferrer">
-              <MessageCircle aria-hidden="true" /> Entrar em contato
-            </a>
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
+const Hero = () => (
+  <section className="py-12 md:py-20 px-4 md:px-8">
+    <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+      <img src={photo.url} alt={`Foto de ${profile.name}`} className="md:hidden w-56 h-56 object-cover border border-border mb-6" />
+      <Button asChild className="md:hidden text-base py-6 px-8 mb-8">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+      </Button>
+      <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">{profile.title} · TCC</p>
+      <h1 className="text-3xl md:text-5xl font-bold mb-6">Cuidado psicológico baseado em evidências</h1>
+      <p className="text-lg md:text-xl mb-8 text-muted-foreground">
+        Atendimento com {profile.approach} para ajudar você a lidar com ansiedade, depressão e outros desafios emocionais.
+      </p>
+      <Button asChild className="hidden md:inline-flex text-lg py-6 px-8">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+      </Button>
+    </div>
+  </section>
+);
 
 export default Hero;
