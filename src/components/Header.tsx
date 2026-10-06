@@ -1,4 +1,6 @@
 
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { profile } from "@/content/profile";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -12,7 +14,15 @@ const Header = () => {
           </span>
           <span className="block text-xs text-muted-foreground">{profile.crp}</span>
         </a>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button asChild size="sm">
+            <a href={profile.whatsappUrl} target="_blank" rel="noreferrer">
+              <MessageCircle aria-hidden="true" />
+              <span className="hidden sm:inline">Contato</span>
+            </a>
+          </Button>
+        </div>
       </div>
     </header>
   );
