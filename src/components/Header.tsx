@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
 
 const Header = () => (
-  <header className="py-6 px-4 md:px-8 flex justify-between items-center gap-4">
+  <header className="py-6 px-4 md:px-8 flex justify-between items-center gap-4 border-b border-border/50">
     <div>
       <div className="text-lg font-medium leading-tight">{profile.name}</div>
       <div className="text-xs text-muted-foreground tracking-wider">{profile.crp}</div>
