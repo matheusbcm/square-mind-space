@@ -1,28 +1,18 @@
-
 import { ThemeToggle } from "./ThemeToggle";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { profile } from "@/data/profile";
 
-const Header = () => {
-  return (
-    <header className="py-6 px-4 md:px-8 flex justify-between items-center">
-      <div className="text-lg font-medium">Dr. Psychology</div>
-      <nav className="hidden md:flex items-center space-x-8">
-        <a href="#about" className="hover:text-primary/80 transition-colors">
-          About
-        </a>
-        <a href="#experience" className="hover:text-primary/80 transition-colors">
-          Experience
-        </a>
-        <a href="#training" className="hover:text-primary/80 transition-colors">
-          Training
-        </a>
-        <a href="#contact" className="hover:text-primary/80 transition-colors">
-          Contact
-        </a>
-      </nav>
+const Header = () => (
+  <header className="py-6 px-4 md:px-8 flex justify-between items-center gap-4">
+    <div>
+      <div className="text-lg font-medium leading-tight">{profile.name}</div>
+      <div className="text-xs text-muted-foreground tracking-wider">{profile.crp}</div>
+    </div>
+    <div className="flex items-center gap-2">
+      <Button variant="outline" asChild><a href="#contato">Contato</a></Button>
       <ThemeToggle />
-    </header>
-  );
-};
+    </div>
+  </header>
+);
 
 export default Header;
