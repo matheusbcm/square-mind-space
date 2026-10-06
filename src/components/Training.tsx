@@ -6,7 +6,7 @@ const trainingItems = [...education, ...additionalTraining];
 
 const Training = () => (
   <section id="formacao" className="section bg-secondary/40">
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <h2 className="section-title">Formação Acadêmica</h2>
       <div className="grid gap-6">
         {trainingItems.map((item) => (
