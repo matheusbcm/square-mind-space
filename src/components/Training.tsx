@@ -15,7 +15,7 @@ const Training = () => (
             className="shadow-square border-border/80 bg-background/90"
           >
             <CardHeader className="flex flex-row items-start gap-4 pb-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <div>
